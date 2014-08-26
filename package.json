@@ -1,0 +1,10 @@
+{
+    "name": "git_tracker",
+    "version": "0.1.0",
+    "dependencies": {
+        "express": "~4.8.5",
+        "socket.io": "~1.0.6"
+    },
+    "author": "--",
+    "description": "--"
+}
