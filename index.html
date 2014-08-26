@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Git Tracker</title>
+  </head>
+
+  <body>
+    <h1>Git Tracker</h1>
+
+    <section id="clients_list"></section>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect('http://localhost:1337');
+      socket.emit('coucou', 'hey');
+      socket.on('new_client', function (nick) {
+        $('#clients_list').prepend('<p><strong>New client: '+nick+'</strong></p>');
+      });
+    </script>
+
+  </body>
+
+</html>
